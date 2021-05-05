@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace CSharpCasino
 {
@@ -15,6 +16,30 @@ namespace CSharpCasino
         public Blackjack()
         {
             InitializeComponent();
+        }
+
+        // Back button on the blackjack window
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Menu mf = new Menu();
+            mf.Show();
+
+            this.Hide();
+        }
+
+        // Hit button to get thew new card
+        private void button2_Click(object sender, EventArgs e)
+        {
+         string result = Interaction.InputBox("Please place your bet!", "Gamble Amount", "$$$", -1, -1);
+           
+            if(Int32.TryParse(result, out int resultInt))
+            {
+                Console.WriteLine(resultInt);
+            }
+            else
+            {
+                Console.WriteLine("Could not parse!");
+            }
         }
     }
 }
