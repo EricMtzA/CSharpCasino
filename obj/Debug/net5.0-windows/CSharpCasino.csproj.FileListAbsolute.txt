@@ -19,3 +19,4 @@ C:\Users\activ\source\repos\CSharpStuff\CSharpCasino\obj\Debug\net5.0-windows\CS
 C:\Users\activ\source\repos\CSharpStuff\CSharpCasino\obj\Debug\net5.0-windows\ref\CSharpCasino.dll
 C:\Users\activ\source\repos\CSharpStuff\CSharpCasino\obj\Debug\net5.0-windows\CSharpCasino.pdb
 C:\Users\activ\source\repos\CSharpStuff\CSharpCasino\obj\Debug\net5.0-windows\CSharpCasino.genruntimeconfig.cache
+C:\Users\activ\source\repos\CSharpStuff\CSharpCasino\obj\Debug\net5.0-windows\CSharpCasino.Credits.resources

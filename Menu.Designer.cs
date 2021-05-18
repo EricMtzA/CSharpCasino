@@ -34,6 +34,7 @@ namespace CSharpCasino
             this.blackjackgame = new System.Windows.Forms.Button();
             this.slotmachinegame = new System.Windows.Forms.Button();
             this.quitoption = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Selection
@@ -79,11 +80,23 @@ namespace CSharpCasino
             this.quitoption.UseVisualStyleBackColor = true;
             this.quitoption.Click += new System.EventHandler(this.quitoption_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(247, 181);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 24);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Credits";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(29F, 58F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.quitoption);
             this.Controls.Add(this.slotmachinegame);
             this.Controls.Add(this.blackjackgame);
@@ -107,5 +120,6 @@ namespace CSharpCasino
         private System.Windows.Forms.Button slotmachinegame;
         private System.Windows.Forms.Button quitoption;
         private System.Windows.Forms.Button slotmachinebutton;
+        private System.Windows.Forms.Button button1;
     }
 }
