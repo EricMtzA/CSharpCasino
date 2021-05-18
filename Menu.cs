@@ -17,7 +17,7 @@ namespace CSharpCasino
             InitializeComponent();
         }
 
-        // Quit button
+        // Quit button[]
         private void quitoption_Click(object sender, EventArgs e)
         {
             this.Close();

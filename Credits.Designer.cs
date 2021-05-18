@@ -66,10 +66,10 @@ namespace CSharpCasino
             this.richTextBox1.ForeColor = System.Drawing.Color.Green;
             this.richTextBox1.Location = new System.Drawing.Point(167, 117);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(220, 129);
+            this.richTextBox1.Size = new System.Drawing.Size(224, 135);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "Yejin Kim - 013413881\n\nEric Martinez - 013322920\n\nBabak Shajari - 014197027\n\nDarr" +
-    "ik Houck - \n";
+    "ik Houck - 013648700\n\n";
             // 
             // Credits
             // 
