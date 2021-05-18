@@ -12,6 +12,9 @@ namespace CSharpCasino
         }
 
         int bal = Global.balance;
+        int slotOne;
+        int slotTwo;
+        int slotThree;
 
         // Pull button
         private void button2_Click(object sender, EventArgs e)
@@ -22,17 +25,37 @@ namespace CSharpCasino
             {
                 Console.WriteLine(resultInt);
 
-                
+                slotOne = slotNumber();
+                slotTwo = slotNumber();
+                slotThree = slotNumber();
 
-                if (resultInt <= bal)
+                firstNum.Text = slotOne.ToString();
+                secondNum.Text = slotTwo.ToString();
+                threeNum.Text = slotThree.ToString();
+
+
+                if (slotOne == slotTwo && slotTwo == slotThree)
                 {
-
+                    DialogResult res = MessageBox.Show("You Won!", "Winner!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    if (res == DialogResult.OK)
+                    {
+                        bal = gambleWin(resultInt);
+                        MessageBox.Show("New balance: " + bal, "Balance");
+                    }
                 }
-
-            }
-            else
-            {
-                Console.WriteLine("Could not parse!");
+                else
+                {
+                    DialogResult res = MessageBox.Show("You lost!", "Loser!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    if (res == DialogResult.OK)
+                    {
+                        bal = gambleLose(resultInt);
+                        MessageBox.Show("New balance: " + bal, "Balance");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Could not parse!");
+                    }
+                }
             }
         }
 
@@ -43,6 +66,34 @@ namespace CSharpCasino
             mf.Show();
 
             this.Hide();
+        }
+
+        // method to change balance when player wins
+        private int gambleWin(int gambleAmount)
+        {
+            bal = bal - gambleAmount;
+            int winnings = gambleAmount * 2;
+
+            bal = bal + winnings;
+
+            return bal;
+        }
+
+        // method to change balance when player loses
+        private int gambleLose(int gambleAmount)
+        {
+            bal = bal - gambleAmount;
+
+            return bal;
+        }
+
+        // method to get a random slot machine number
+        private int slotNumber()
+        {
+            Random rand = new Random();
+            int slotNum = rand.Next(1, 4);
+
+            return slotNum;
         }
     }
 }
